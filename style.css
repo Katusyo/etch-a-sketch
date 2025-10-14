@@ -1,12 +1,25 @@
 #grid-container {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: (eepeat 16. 1fr);
+    display: /* grid */ flex;
+/*    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16. 1fr);     */
+    flex-wrap: wrap;
     width: 500px;
     height : 500px;
     border: 1px solid black;
 }
 
-.grid-cell {
+.grid-item {
+    box-sizing: border-box;
+    width: calc(100% / 16);
+    height: calc(100% / 16);
     border: 1px solid lightgray;
+}
+
+/*.grid-cell {
+    border: 1px solid lightgray;
+}
+*/
+
+.grid-item:hover {
+    background-color: blue;
 }

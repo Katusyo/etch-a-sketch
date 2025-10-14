@@ -10,11 +10,11 @@ function createGrid(squaresPerSide) {
     const itemSize = containerSize / squaresPerSide;
 
     for (let i = 0; i < squaresPerSide * squaresPerSide; i++) {
-        const gridItem = document.createElement('div');
-        gridItem.classList.add('grid-item');
-        gridItem.style.width = `${itemSize}px`;
-        gridItem.style.height = `${itemSize}px`;
-        gridContainer.appendChild(gridSquare);
+        const item = document.createElement('div');
+        item.classList.add('grid-item');
+        item.style.width = `${itemSize}px`;
+        item.style.height = `${itemSize}px`;
+        gridContainer.appendChild(item);
     }
 }
 

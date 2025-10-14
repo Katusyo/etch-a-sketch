@@ -7,4 +7,4 @@ IF page is opened THEN
 WHILE page is open allow for button to change grid size
 - create a draw function
 - create a clear drawing button
-- listen for moude hovering over grid
+- listen for mouse hovering over grid

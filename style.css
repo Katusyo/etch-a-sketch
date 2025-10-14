@@ -1,3 +1,11 @@
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    margin:20px;
+}
+
 #grid-container {
     display: /* grid */ flex;
 /*    grid-template-columns: repeat(16, 1fr);
@@ -6,6 +14,7 @@
     width: 500px;
     height : 500px;
     border: 1px solid black;
+    margin-top: 20px;
 }
 
 .grid-item {
@@ -22,4 +31,10 @@
 
 .grid-item:hover {
     background-color: blue;
+}
+
+#newGridBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }

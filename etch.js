@@ -23,6 +23,7 @@ function createGrid(squaresPerSide) {
     }
 }
 
+
 function getRandomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -42,9 +43,3 @@ newGridBtn.addEventListener('click', () => {
         alert("Please enter a valid number between 1 and 100.");
     }
 });
-
-//for (let i = 0; i < totalCells; i++) {
-//    const cell = document.createElement('div');
-//    cell.classList.add('grid-cell');
-//    gridContainer.appendChild(cell);
-//}

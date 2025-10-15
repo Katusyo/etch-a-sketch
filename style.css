@@ -7,9 +7,7 @@ body {
 }
 
 #grid-container {
-    display: /* grid */ flex;
-/*    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16. 1fr);     */
+    display: flex;
     flex-wrap: wrap;
     width: 500px;
     height : 500px;
@@ -22,15 +20,6 @@ body {
     width: calc(100% / 16);
     height: calc(100% / 16);
     border: 1px solid lightgray;
-}
-
-/*.grid-cell {
-    border: 1px solid lightgray;
-}
-*/
-
-.grid-item:hover {
-
 }
 
 #newGridBtn {

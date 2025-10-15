@@ -14,23 +14,37 @@ function createGrid(squaresPerSide) {
         item.classList.add('grid-item');
         item.style.width = `${itemSize}px`;
         item.style.height = `${itemSize}px`;
+
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = getRandomColor();
+        });
+        
         gridContainer.appendChild(item);
     }
 }
 
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+document.body.style.backGroundColor = getRandomColor();
+
 newGridBtn.addEventListener('click', () => {
-    let newSize = prompt("Enter the number of squares per side for the new grid:");
+    let newSize = prompt("Enter the number of squares per side for the new grid (max 100):");
     newSize = parseInt(newSize);
 
-    if (!isNaN(newSize) && newSize > 0) {
+    if (!isNaN(newSize) && newSize > 0 && newSize <= 100) {
         createGrid(newSize);
     } else {
-        alert("Please enter a valid positive number.");
+        alert("Please enter a valid number between 1 and 100.");
     }
 });
 
-for (let i = 0; i < totalCells; i++) {
-    const cell = document.createElement('div');
-    cell.classList.add('grid-cell');
-    gridContainer.appendChild(cell);
-}
+//for (let i = 0; i < totalCells; i++) {
+//    const cell = document.createElement('div');
+//    cell.classList.add('grid-cell');
+//    gridContainer.appendChild(cell);
+//}
